@@ -38,14 +38,14 @@ variable "lc_ctype" {
   default     = "C"
 }
 
-variable "role" {
-  description = "The name of the role, default - name of database"
+variable "owner" {
+  description = "The name of the database owner role, default - name of database"
   type        = string
   default     = null
 }
 
 variable "password" {
-  description = "Role's password parameters"
+  description = "Owner role's password parameters"
   type = object({
     length  = optional(number, 20)
     special = optional(bool, false)
