@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.0.2](https://github.com/cloud-labs-infra/terraform-postgresql-database/compare/v1.0.1...v1.0.2) (2023-05-10)
+
+
+### Bug Fixes
+
+* Rename 'role' to 'owner' ([#3](https://github.com/cloud-labs-infra/terraform-postgresql-database/issues/3)) ([b6ef7ca](https://github.com/cloud-labs-infra/terraform-postgresql-database/commit/b6ef7caba4cb664ec4f63e7a1d5c5f75c0b9d1b1))
+
 ### [1.0.1](https://github.com/cloud-labs-infra/terraform-postgresql-database/compare/v1.0.0...v1.0.1) (2023-05-10)
 
 
