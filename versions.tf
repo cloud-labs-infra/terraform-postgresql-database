@@ -4,11 +4,11 @@ terraform {
   required_providers {
     postgresql = {
       source  = "cyrilgdn/postgresql"
-      version = "1.19.0"
+      version = "~>1.19"
     }
     random = {
       source  = "hashicorp/random"
-      version = "3.5.1"
+      version = "~>3.5"
     }
   }
 }
