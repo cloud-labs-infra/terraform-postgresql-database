@@ -14,7 +14,7 @@ resource "random_password" "password" {
 }
 
 resource "postgresql_role" "owner" {
-  name               = var.role == null ? var.name : var.role
+  name               = var.owner == null ? var.name : var.owner
   login              = true
   password           = md5(random_password.password.result)
   encrypted_password = true

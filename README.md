@@ -37,14 +37,14 @@ No modules.
 | <a name="input_lc_collate"></a> [lc\_collate](#input\_lc\_collate) | Collation order `LC_COLLATE` to use in the database | `string` | `"C"` | no |
 | <a name="input_lc_ctype"></a> [lc\_ctype](#input\_lc\_ctype) | Character classification `LC_CTYPE` to use in the database | `string` | `"C"` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the database | `string` | n/a | yes |
-| <a name="input_password"></a> [password](#input\_password) | Role's password parameters | <pre>object({<br>    length  = optional(number, 20)<br>    special = optional(bool, false)<br>  })</pre> | `{}` | no |
-| <a name="input_role"></a> [role](#input\_role) | The name of the role, default - name of database | `string` | `null` | no |
+| <a name="input_owner"></a> [owner](#input\_owner) | The name of the database owner role, default - name of database | `string` | `null` | no |
+| <a name="input_password"></a> [password](#input\_password) | Owner role's password parameters | <pre>object({<br>    length  = optional(number, 20)<br>    special = optional(bool, false)<br>  })</pre> | `{}` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_db_owner_name"></a> [db\_owner\_name](#output\_db\_owner\_name) | Database owner name |
-| <a name="output_db_owner_password"></a> [db\_owner\_password](#output\_db\_owner\_password) | Database owner password |
 | <a name="output_name"></a> [name](#output\_name) | Database name |
+| <a name="output_owner_name"></a> [owner\_name](#output\_owner\_name) | Database owner name |
+| <a name="output_owner_password"></a> [owner\_password](#output\_owner\_password) | Database owner password |
 <!-- END_TF_DOCS -->
