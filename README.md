@@ -5,15 +5,15 @@
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.4 |
-| <a name="requirement_postgresql"></a> [postgresql](#requirement\_postgresql) | 1.19.0 |
-| <a name="requirement_random"></a> [random](#requirement\_random) | 3.5.1 |
+| <a name="requirement_postgresql"></a> [postgresql](#requirement\_postgresql) | ~>1.19 |
+| <a name="requirement_random"></a> [random](#requirement\_random) | ~>3.5 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_postgresql"></a> [postgresql](#provider\_postgresql) | 1.19.0 |
-| <a name="provider_random"></a> [random](#provider\_random) | 3.5.1 |
+| <a name="provider_postgresql"></a> [postgresql](#provider\_postgresql) | ~>1.19 |
+| <a name="provider_random"></a> [random](#provider\_random) | ~>3.5 |
 
 ## Modules
 
@@ -23,9 +23,9 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [postgresql_database.main](https://registry.terraform.io/providers/cyrilgdn/postgresql/1.19.0/docs/resources/database) | resource |
-| [postgresql_role.owner](https://registry.terraform.io/providers/cyrilgdn/postgresql/1.19.0/docs/resources/role) | resource |
-| [random_password.password](https://registry.terraform.io/providers/hashicorp/random/3.5.1/docs/resources/password) | resource |
+| [postgresql_database.main](https://registry.terraform.io/providers/cyrilgdn/postgresql/latest/docs/resources/database) | resource |
+| [postgresql_role.owner](https://registry.terraform.io/providers/cyrilgdn/postgresql/latest/docs/resources/role) | resource |
+| [random_password.password](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password) | resource |
 
 ## Inputs
 
