@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://github.com/cloud-labs-infra/terraform-postgresql-database/compare/v1.0.2...v1.1.0) (2023-05-15)
+
+
+### Features
+
+* Add grant privileges ([#4](https://github.com/cloud-labs-infra/terraform-postgresql-database/issues/4)) ([e6ee7f9](https://github.com/cloud-labs-infra/terraform-postgresql-database/commit/e6ee7f93f5036917fda31ee972eb80684bb24e34))
+
 ### [1.0.2](https://github.com/cloud-labs-infra/terraform-postgresql-database/compare/v1.0.1...v1.0.2) (2023-05-10)
 
 
