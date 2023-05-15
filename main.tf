@@ -5,7 +5,7 @@ resource "postgresql_database" "main" {
   lc_ctype          = var.lc_ctype
   connection_limit  = var.connection_limit
   allow_connections = var.allow_connections
-  owner             = postgresql_role.owner.name
+  owner             = var.make_owner ? postgresql_role.role.name : null
 }
 
 resource "random_password" "password" {
@@ -13,9 +13,15 @@ resource "random_password" "password" {
   special = var.password.special
 }
 
-resource "postgresql_role" "owner" {
-  name               = var.owner == null ? var.name : var.owner
-  login              = true
-  password           = md5(random_password.password.result)
-  encrypted_password = true
+resource "postgresql_role" "role" {
+  name     = var.role == null ? var.name : var.role
+  login    = true
+  password = random_password.password.result
+}
+
+resource "postgresql_grant" "database" {
+  database    = postgresql_database.main.name
+  role        = postgresql_role.role.name
+  object_type = "database"
+  privileges  = var.privileges
 }
