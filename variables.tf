@@ -38,10 +38,16 @@ variable "lc_ctype" {
   default     = "C"
 }
 
-variable "owner" {
-  description = "The name of the database owner role, default - name of database"
+variable "role" {
+  description = "The name of the role, default - name of database"
   type        = string
   default     = null
+}
+
+variable "make_owner" {
+  description = "Set role as an owner of database"
+  type        = bool
+  default     = false
 }
 
 variable "password" {
@@ -51,4 +57,14 @@ variable "password" {
     special = optional(bool, false)
   })
   default = {}
+}
+
+variable "privileges" {
+  description = "The list of privileges to grant role for the database"
+  type        = list(string)
+  default = [
+    "CONNECT",
+    "CREATE",
+    "TEMPORARY",
+  ]
 }

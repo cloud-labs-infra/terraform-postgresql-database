@@ -24,7 +24,8 @@ No modules.
 | Name | Type |
 |------|------|
 | [postgresql_database.main](https://registry.terraform.io/providers/cyrilgdn/postgresql/latest/docs/resources/database) | resource |
-| [postgresql_role.owner](https://registry.terraform.io/providers/cyrilgdn/postgresql/latest/docs/resources/role) | resource |
+| [postgresql_grant.database](https://registry.terraform.io/providers/cyrilgdn/postgresql/latest/docs/resources/grant) | resource |
+| [postgresql_role.role](https://registry.terraform.io/providers/cyrilgdn/postgresql/latest/docs/resources/role) | resource |
 | [random_password.password](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password) | resource |
 
 ## Inputs
@@ -36,15 +37,17 @@ No modules.
 | <a name="input_encoding"></a> [encoding](#input\_encoding) | Character set encoding to use in the database | `string` | `"UTF8"` | no |
 | <a name="input_lc_collate"></a> [lc\_collate](#input\_lc\_collate) | Collation order `LC_COLLATE` to use in the database | `string` | `"C"` | no |
 | <a name="input_lc_ctype"></a> [lc\_ctype](#input\_lc\_ctype) | Character classification `LC_CTYPE` to use in the database | `string` | `"C"` | no |
+| <a name="input_make_owner"></a> [make\_owner](#input\_make\_owner) | Set role as an owner of database | `bool` | `false` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the database | `string` | n/a | yes |
-| <a name="input_owner"></a> [owner](#input\_owner) | The name of the database owner role, default - name of database | `string` | `null` | no |
 | <a name="input_password"></a> [password](#input\_password) | Owner role's password parameters | <pre>object({<br>    length  = optional(number, 20)<br>    special = optional(bool, false)<br>  })</pre> | `{}` | no |
+| <a name="input_privileges"></a> [privileges](#input\_privileges) | The list of privileges to grant role for the database | `list(string)` | <pre>[<br>  "CONNECT",<br>  "CREATE",<br>  "TEMPORARY"<br>]</pre> | no |
+| <a name="input_role"></a> [role](#input\_role) | The name of the role, default - name of database | `string` | `null` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | <a name="output_name"></a> [name](#output\_name) | Database name |
-| <a name="output_owner_name"></a> [owner\_name](#output\_owner\_name) | Database owner name |
-| <a name="output_owner_password"></a> [owner\_password](#output\_owner\_password) | Database owner password |
+| <a name="output_role_name"></a> [role\_name](#output\_role\_name) | Role name |
+| <a name="output_role_password"></a> [role\_password](#output\_role\_password) | Role password |
 <!-- END_TF_DOCS -->

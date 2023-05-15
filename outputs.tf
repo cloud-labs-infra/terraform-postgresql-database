@@ -3,14 +3,14 @@ output "name" {
   value       = postgresql_database.main.name
 }
 
-output "owner_name" {
-  description = "Database owner name"
+output "role_name" {
+  description = "Role name"
   sensitive   = true
-  value       = postgresql_database.main.owner
+  value       = postgresql_role.role.name
 }
 
-output "owner_password" {
-  description = "Database owner password"
+output "role_password" {
+  description = "Role password"
   sensitive   = true
   value       = random_password.password.result
 }
