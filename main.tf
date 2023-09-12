@@ -9,8 +9,9 @@ resource "postgresql_database" "main" {
 }
 
 resource "random_password" "password" {
-  length  = var.password.length
-  special = var.password.special
+  length      = var.password.length
+  special     = var.password.special
+  min_numeric = var.password.min_numeric
 }
 
 resource "postgresql_role" "role" {
