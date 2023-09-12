@@ -53,8 +53,9 @@ variable "make_owner" {
 variable "password" {
   description = "Owner role's password parameters"
   type = object({
-    length  = optional(number, 20)
-    special = optional(bool, false)
+    length      = optional(number, 20)
+    special     = optional(bool, false)
+    min_numeric = optional(number, 2)
   })
   default = {}
 }

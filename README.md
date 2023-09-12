@@ -39,7 +39,7 @@ No modules.
 | <a name="input_lc_ctype"></a> [lc\_ctype](#input\_lc\_ctype) | Character classification `LC_CTYPE` to use in the database | `string` | `"C"` | no |
 | <a name="input_make_owner"></a> [make\_owner](#input\_make\_owner) | Set role as an owner of database | `bool` | `false` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the database | `string` | n/a | yes |
-| <a name="input_password"></a> [password](#input\_password) | Owner role's password parameters | <pre>object({<br>    length  = optional(number, 20)<br>    special = optional(bool, false)<br>  })</pre> | `{}` | no |
+| <a name="input_password"></a> [password](#input\_password) | Owner role's password parameters | <pre>object({<br>    length      = optional(number, 20)<br>    special     = optional(bool, false)<br>    min_numeric = optional(number, 2)<br>  })</pre> | `{}` | no |
 | <a name="input_privileges"></a> [privileges](#input\_privileges) | The list of privileges to grant role for the database | `list(string)` | <pre>[<br>  "CONNECT",<br>  "CREATE",<br>  "TEMPORARY"<br>]</pre> | no |
 | <a name="input_role"></a> [role](#input\_role) | The name of the role, default - name of database | `string` | `null` | no |
 
