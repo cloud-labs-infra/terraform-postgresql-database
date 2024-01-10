@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.1.1](https://github.com/cloud-labs-infra/terraform-postgresql-database/compare/v1.1.0...v1.1.1) (2024-01-10)
+
+
+### Bug Fixes
+
+* Add min_lower param to password ([#10](https://github.com/cloud-labs-infra/terraform-postgresql-database/issues/10)) ([89b0098](https://github.com/cloud-labs-infra/terraform-postgresql-database/commit/89b00985999dd916be34c524462b3321295991d0))
+* trigger version ([7cb703b](https://github.com/cloud-labs-infra/terraform-postgresql-database/commit/7cb703b5af07a80f27bddbf858a87cbc938a8200))
+
 ## [1.1.0](https://github.com/cloud-labs-infra/terraform-postgresql-database/compare/v1.0.2...v1.1.0) (2023-05-15)
 
 
