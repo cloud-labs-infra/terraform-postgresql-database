@@ -56,6 +56,7 @@ variable "password" {
     length      = optional(number, 20)
     special     = optional(bool, false)
     min_numeric = optional(number, 2)
+    min_lower   = optional(number, 2)
   })
   default = {}
 }

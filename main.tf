@@ -12,6 +12,7 @@ resource "random_password" "password" {
   length      = var.password.length
   special     = var.password.special
   min_numeric = var.password.min_numeric
+  min_lower   = var.password.min_lower
 }
 
 resource "postgresql_role" "role" {
