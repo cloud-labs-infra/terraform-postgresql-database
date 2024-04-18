@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://github.com/cloud-labs-infra/terraform-postgresql-database/compare/v1.1.1...v1.2.0) (2024-04-18)
+
+
+### Features
+
+* Update tf version ([#11](https://github.com/cloud-labs-infra/terraform-postgresql-database/issues/11)) ([0cc78a0](https://github.com/cloud-labs-infra/terraform-postgresql-database/commit/0cc78a089e81cf168e2ebc1e88a78fa3d01b2e45))
+
 ### [1.1.1](https://github.com/cloud-labs-infra/terraform-postgresql-database/compare/v1.1.0...v1.1.1) (2024-01-10)
 
 
